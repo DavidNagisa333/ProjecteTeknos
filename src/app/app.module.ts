@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { PressupostComponent } from './pressupost/pressupost.component';
 import { TiquetComponent } from './tiquet/tiquet.component';
 import { LoginComponent } from './login/login.component';
+import { PressupostService} from './pressupost/pressupost.service';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PressupostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
