@@ -12,15 +12,10 @@ import { Router } from '@angular/router';
 
 export class AppComponent implements OnInit{
 
-    
-    title = 'Escola Otaku';
-
-   
     logged=false;
 
     constructor(private loginService : LoginService,
                private router:Router){}
-
 
     logout(){ 
          window.location.reload();
@@ -36,8 +31,6 @@ export class AppComponent implements OnInit{
             }
         else{
             var a = this.loginService.getToken();
-            console.log(a);
-            //var a = this.currentUserData();
             this.logged=true;  
             this.router.navigate(['']);
         }
