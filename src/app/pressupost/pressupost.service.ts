@@ -12,7 +12,7 @@ export class PressupostService {
 
   getEmployees(){
     console.log('service');
-    return this._http.get("C:/xampp/cgi-bin/api/select.php")
+    return this._http.get("http://172.17.10.64/api/select.php")
       .map(res => res.json());
        
       };
