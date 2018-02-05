@@ -35,4 +35,11 @@ export class TiquetService {
       return a;
     }
 
+    ///////
+  	buscarTiquets(nom){
+    	var getUrl = this.url + "searchByName?nom=" + nom;
+    	var a = this.http.get(getUrl)
+                .map(res => res.json())
+      return a;
+    }
 }

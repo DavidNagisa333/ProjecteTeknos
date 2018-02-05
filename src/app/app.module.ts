@@ -16,6 +16,7 @@ import { CrearPressupostComponent } from './pressupost/crear-pressupost/crear-pr
 import { ModificarPressupostComponent } from './pressupost/modificar-pressupost/modificar-pressupost.component';
 import { EsborrarPressupostComponent } from './pressupost/esborrar-pressupost/esborrar-pressupost.component';
 import { ConsultarPressupostComponent } from './pressupost/consultar-pressupost/consultar-pressupost.component';
+import { BuscarTiquetComponent } from './tiquet/buscar-tiquet/buscar-tiquet.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ConsultarPressupostComponent } from './pressupost/consultar-pressupost/
     CrearPressupostComponent,
     ModificarPressupostComponent,
     EsborrarPressupostComponent,
-    ConsultarPressupostComponent
+    ConsultarPressupostComponent,
+    BuscarTiquetComponent
   ],
   imports: [
     BrowserModule,
