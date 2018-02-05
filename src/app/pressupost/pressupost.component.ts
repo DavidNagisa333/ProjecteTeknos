@@ -5,7 +5,6 @@ import {ActivatedRoute, Params, Router} from '@angular/router';
 @Component({
   selector: 'app-pressupost',
   templateUrl: './pressupost.component.html',
-  styleUrls: ['./pressupost.component.css']
 })
 export class PressupostComponent implements OnInit {
 
@@ -23,8 +22,9 @@ export class PressupostComponent implements OnInit {
      this._empService
         .getEmployees()
         .subscribe(employees => {
-          this.employees = employees;
-          console.log(employees);
+        console.log(employees)
+        this.employees = employees;
+          
       } )
   }
 }

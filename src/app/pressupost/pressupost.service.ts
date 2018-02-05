@@ -11,23 +11,11 @@ export class PressupostService {
   checkMe:any;
 
   getEmployees(){
-    return this._http.get("C:/xampp/cgi-bin/api/select.php/")
-      .map(res=>{
-        this.checkMe = res;
-      
-        if(this.checkMe._body !== "0"){
-           return res.json()
-        }
+    console.log('service');
+    return this._http.get("C:/xampp/cgi-bin/api/select.php")
+      .map(res => res.json());
        
-      });
-  }
-
-  private headers = new Headers({
-        'Content-Type': 'application/json',        
-    });
-
-    private headers_post = new Headers({
-        'Content-Type': 'x-www-form-urlencoded',
-    });
-
+      };
 }
+
+

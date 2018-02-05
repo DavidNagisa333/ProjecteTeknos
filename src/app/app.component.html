@@ -1,14 +1,25 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div id="navbar" class="collapse navbar-collapse">
+<div id="navbar" class="navbar navbar-inverse">
 
-          <ul class="nav navbar-nav navbar-right">
-            <li [routerLinkActive]="['active']"><a class="btn btn-warning" [routerLink]="['/logout']"><strong> Logout </strong></a></li>
+	<div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['']">ProjecteFinal</a>
+    </div>
 
-            <li [routerLinkActive]="['active']"><a class="btn btn-default" [routerLink]="['/tiquet']"><strong>Tiquet</strong></a></li>
+        <ul class="nav navbar-nav">
+          	
+          	<li [routerLinkActive]="['active']"><a class="active" [routerLink]="['']"><strong> Home </strong></a></li>  
+
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/tiquet']"><strong>Tiquet</strong></a></li>
             
-            <li [routerLinkActive]="['active']"><a class="btn btn-default" [routerLink]="['/pressupost']"><strong>Pressupostos</strong></a></li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/pressupost']"><strong>Pressupostos</strong></a></li>
+           
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+         	<li [routerLinkActive]="['active']"><a class="glyphicon glyphicon-log-out" [routerLink]="['/logout']"><strong> Logout </strong></a></li>
 
-            <!--<li [routerLinkActive]="['active']"><a [routerLink]="['/add']">Afegir un Pressupost</a></li>-->
-          </ul>
-        </div><!--/.nav-collapse -->
+            <li [routerLinkActive]="['active']"><a class="glyphicon glyphicon-log-in" [routerLink]="['/login']"><strong> Login </strong></a></li>
+        </ul>
+      </div>
+    </div>
 <router-outlet></router-outlet>
