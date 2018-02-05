@@ -25,6 +25,6 @@ export class PressupostComponent implements OnInit {
         console.log(employees)
         this.employees = employees;
           
-      } )
+      })
   }
 }
