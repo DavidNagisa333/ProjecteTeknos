@@ -1,3 +1,15 @@
-<p>
-  tiquet works!
-</p>
+<button (click)="listTiquets()" class="btn btn-default">Mostrar Tiquets
+</button>
+
+
+  <div *ngFor='let tiquet of tiquets'>
+    <!--cursos fa ref. a components data-->
+    ----------------------------
+    <p>Tiquet: {{tiquet.id}}</p>
+    ----------------------------
+    <p>
+      Nom: {{tiquet.nom}}
+    </p>
+  </div> 
+    
+  
