@@ -5,9 +5,29 @@ import 'rxjs/add/operator/map'
 
 @Injectable()
 export class PressupostService {
-   private addUrl = 'http://localhost:8080/';
+  
+ employees=[];
+  constructor(private _http:Http) { }
+  checkMe:any;
 
+  getEmployees(){
+    return this._http.get("C:/xampp/cgi-bin/api/select.php/")
+      .map(res=>{
+        this.checkMe = res;
+      
+        if(this.checkMe._body !== "0"){
+           return res.json()
+        }
+       
+      });
+  }
 
-	constructor(private http: Http){}
+  private headers = new Headers({
+        'Content-Type': 'application/json',        
+    });
+
+    private headers_post = new Headers({
+        'Content-Type': 'x-www-form-urlencoded',
+    });
 
 }

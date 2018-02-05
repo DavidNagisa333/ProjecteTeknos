@@ -16,6 +16,7 @@ import { CrearPressupostComponent } from './pressupost/crear-pressupost/crear-pr
 import { ModificarPressupostComponent } from './pressupost/modificar-pressupost/modificar-pressupost.component';
 import { EsborrarPressupostComponent } from './pressupost/esborrar-pressupost/esborrar-pressupost.component';
 import { ConsultarPressupostComponent } from './pressupost/consultar-pressupost/consultar-pressupost.component';
+import { PressupostService} from './pressupost/pressupost.service';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import { ConsultarPressupostComponent } from './pressupost/consultar-pressupost/
     AppRoutingModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PressupostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
