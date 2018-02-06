@@ -1,25 +1,24 @@
-<h2>Pressupostos</h2>
+
+<h2 style="color:lightGrey;display: inline-block;">Pressupostos</h2>
 <table class="table">
   <thead>
     <tr class="transparent">
       <th class="cela"><strong>Nom</strong></th>
       <th class="cela"><strong>Cognom</strong></th>
       <th class="cela"><strong>Situació Laboral</strong></th>
-      <th class="cela">Acció</th>
+      <th class="cela"><a class="btn btn-info btn-xs" [routerLink]="['/addPressupost']">   Nou Pressupost
+</a></th>
     </tr>
   </thead>
   <tbody>
      <tr *ngFor="let pressupost of pressupostos">
-        <td>{{pressupost.nomPersona}}</td>
-        <td>{{pressupost.cognomPersona}}</td>
-        <td>{{pressupost.situacioLaboral}}</td>
-        <td width=275>
-            <a class="btn btn-info" routerLink="/detallPressupost/{{pressupost.id}}">Detall</a> 
-            <a class="btn btn-success" routerLink="/editarPressupost/{{pressupost.id}}">Editar</a>
-            <a class="btn btn-danger" (click)="deletePressupost(pressupost.id)">Eliminar</a>
+        <td class="cela">{{pressupost.nomPersona}}</td>
+        <td class="cela">{{pressupost.cognomPersona}}</td>
+        <td class="cela">{{pressupost.situacioLaboral}}</td>
+        <td class="cela" width=275>
+            <a class="btn btn-warning btn-xs glyphicon glyphicon-edit" routerLink="/editarPressupost/{{pressupost.id}}"></a>
+            <a class="btn btn-danger btn-xs glyphicon glyphicon-trash" (click)="deletePressupost(pressupost.id)"></a>
         </td>
      </tr>
   </tbody>
-
 </table>
-<a class="btn btn-success" [routerLink]="['/addPressupost']">Crear</a>

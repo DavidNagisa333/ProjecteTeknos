@@ -13,7 +13,199 @@ export class PressupostComponent implements OnInit {
     private router: Router
    ) { }
 
-  pressupostos:any;
+  pressupostos = [
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  },
+  {
+    "nomPersona" : "1",
+    "cognomPersona" : "1",
+    "situacioLaboral" : "1",
+    "ingressos" : "1",
+    "demanda" : "1"
+  }
+
+
+  ];
   ngOnInit() {
     this.getPressupostos();
   }

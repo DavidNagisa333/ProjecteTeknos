@@ -12,22 +12,21 @@ body{
 thead .cela{
    color:white !important;
    border: 0px !important;
-   border-radius: 50px;
    text-align: center;
 }
 
 tbody .cela{
-   color:white !important;
-   border-radius: 50px;
+   color:black !important;  
    background-color: LightGrey;
    text-align: center;
+   opacity: 0.9;
 }
 
 .transparent {
    border: 0px !important;
    background-color: grey;   
    border: 4px black;
-   opacity: 0.8;
+   opacity: 0.9;
    color: black;
 }
 
