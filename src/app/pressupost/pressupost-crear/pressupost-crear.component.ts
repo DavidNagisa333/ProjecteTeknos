@@ -5,8 +5,7 @@ import {ActivatedRoute, Params, Router} from '@angular/router';
 
 @Component({
   selector: 'app-pressupost-crear',
-  templateUrl: './pressupost-crear.component.html',
-  styleUrls: ['./pressupost-crear.component.css']
+  templateUrl: './pressupost-crear.component.html'
 })
 export class PressupostCrearComponent implements OnInit {
 

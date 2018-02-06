@@ -2,6 +2,10 @@
 body{
   background-image: url("app/vendor/fons-home.jpg");
 }
+.table{
+   background-color: lightgrey;
+   opacity: 0.9;
+}
 
 .navbar {
    background-color: transparent;
@@ -13,7 +17,7 @@ body{
 .transparent {
    background-color: grey;
    border-color: black;
-   opacity: 0.8;
+   opacity: 0.9;
    color: black;
 }
 

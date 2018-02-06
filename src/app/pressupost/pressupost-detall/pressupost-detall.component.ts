@@ -5,8 +5,7 @@ import { Pressupost } from '../pressupost';
 
 @Component({
   selector: 'app-pressupost-detall',
-  templateUrl: './pressupost-detall.component.html',
-  styleUrls: ['./pressupost-detall.component.css']
+  templateUrl: './pressupost-detall.component.html'
 })
 export class PressupostDetallComponent implements OnInit {
 

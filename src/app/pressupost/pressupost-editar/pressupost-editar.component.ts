@@ -5,8 +5,7 @@ import { Pressupost } from '../pressupost';
 
 @Component({
   selector: 'app-pressupost-editar',
-  templateUrl: './pressupost-editar.component.html',
-  styleUrls: ['./pressupost-editar.component.css']
+  templateUrl: './pressupost-editar.component.html'
 })
 export class PressupostEditarComponent implements OnInit {
 

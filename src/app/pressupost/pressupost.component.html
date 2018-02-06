@@ -1,11 +1,11 @@
 <h2>Pressupostos</h2>
 <table class="table table-bordered">
-  <thead>
-    <tr class="transparent">
-      <td style="color: white"><strong>Nom</strong></td>
-      <td style="color: white"><strong>Cognom</strong></td>
-      <td style="color: white"><strong>Situació Laboral</strong></td>
-      <td style="color: white" width=275 align="center">Acció</td>
+  <thead class="table">
+    <tr>
+      <td ><strong>Nom</strong></td>
+      <td ><strong>Cognom</strong></td>
+      <td ><strong>Situació Laboral</strong></td>
+      <td ><Strong>Acció</Strong></td>
     </tr>
   </thead>
   <tbody>
@@ -14,12 +14,12 @@
         <td>{{pressupost.cognomPersona}}</td>
         <td>{{pressupost.situacioLaboral}}</td>
         <td width=275>
-            <a class="btn btn-info" routerLink="/detallPressupost/{{pressupost.id}}">Detall</a> 
-            <a class="btn btn-success" routerLink="/editarPressupost/{{pressupost.id}}">Editar</a>
+            <a class="btn btn-primary" routerLink="/detallPressupost/{{pressupost.id}}">Detall</a> 
+            <a class="btn btn-info" routerLink="/editarPressupost/{{pressupost.id}}">Editar</a>
             <a class="btn btn-danger" (click)="deletePressupost(pressupost.id)">Eliminar</a>
         </td>
      </tr>
   </tbody>
 
 </table>
-<a class="btn btn-success" [routerLink]="['/addPressupost']">Crear</a>
+<a class="btn btn-success" style="width: 100%; " [routerLink]="['/addPressupost']">Afegir un nou Pressupost</a>
