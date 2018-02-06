@@ -1,24 +1,25 @@
+<h2>Pressupostos</h2>
 <table class="table table-bordered">
   <thead>
-    <tr>
-      <td>Usuari</td>
-      <td>Posició de Treball</td>
-      <td>Departament</td>
-      <td width=275 align="center">Acció</td>
+    <tr style="background-color: black ">
+      <td style="color: white"><strong>Nom</strong></td>
+      <td style="color: white"><strong>Cognom</strong></td>
+      <td style="color: white"><strong>Situació Laboral</strong></td>
+      <td style="color: white" width=275 align="center">Acció</td>
     </tr>
   </thead>
   <tbody>
-     <tr *ngFor="let employee of employees">
-        <td>{{employee.name}}</td>
-        <td>{{employee.position}}</td>
-        <td>{{employee.department}}</td>
+     <tr *ngFor="let pressupost of pressupostos">
+        <td>{{pressupost.nomPersona}}</td>
+        <td>{{pressupost.cognomPersona}}</td>
+        <td>{{pressupost.situacioLaboral}}</td>
         <td width=275> 
-            <a class="btn btn-info" routerLink="/show/{{employee._id}}">Detall</a> 
-            <a class="btn btn-success" routerLink="/edit/{{employee._id}}">Editar</a>
-            <a class="btn btn-danger" (click)="deleteEmployee(employee._id)">Eliminar</a>
+            <a class="btn btn-info" routerLink="/show/{{pressupost.id}}">Detall</a> 
+            <a class="btn btn-success" routerLink="/edit/{{pressupost.id}}">Editar</a>
+            <a class="btn btn-danger" (click)="deletePressupost(pressupost.id)">Eliminar</a>
         </td>
      </tr>
   </tbody>
 
 </table>
-<a class="btn btn-success" [routerLink]="['/add']">Crear</a>
+<a class="btn btn-success" [routerLink]="['/addPressupost']">Crear</a>

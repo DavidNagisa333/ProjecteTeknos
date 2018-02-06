@@ -9,22 +9,30 @@ import {ActivatedRoute, Params, Router} from '@angular/router';
 export class PressupostComponent implements OnInit {
 
     constructor(
-    private _empService:PressupostService,
+    private _pressupostService:PressupostService,
     private router: Router
    ) { }
-  employees:any;
+  pressupostos:any;
   ngOnInit() {
-    this.getEmployees();
+    this.getPressupostos();
   }
 
-  getEmployees(){
+  getPressupostos(){
     console.log('component');
-     this._empService
-        .getEmployees()
-        .subscribe(employees => {
-        console.log(employees)
-        this.employees = employees;
+     this._pressupostService
+        .getPressupostos()
+        .subscribe(pressupostos => {
+        console.log(pressupostos)
+        this.pressupostos = pressupostos;
           
       })
+  }
+
+  deletePressupost(id){
+      this._pressupostService
+        .deletePressupost(id)
+        .subscribe(() => {
+        this.getPressupostos();
+      } )
   }
 }
