@@ -1,0 +1,45 @@
+
+
+<div class="panel panel-default" *ngIf=pressupost>
+  <div class="panel-heading">Informació detallada del Pressupost</div>
+  <div class="panel-body">
+      <form class="form-horizontal" >
+        <div class="form-group">
+          <label for="nomPersona" class="col-sm-2 control-label">Nom del solicitant : </label>
+          <div class="col-sm-9">
+            <p class="form-control">{{pressupost.nomPersona}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cognomPersona" class="col-sm-2 control-label">Cognoms del solicitant : </label>
+          <div class="col-sm-9">
+          <p class="form-control">{{pressupost.cognomPersona}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="situacioLaboral" class="col-sm-2 control-label">Situació Laboral : </label>
+          <div class="col-sm-9">
+          <p class="form-control">{{pressupost.situacioLaboral}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="ingressos" class="col-sm-2 control-label">Ingressos mensuals : </label>
+          <div class="col-sm-9">
+            <p class="form-control">{{pressupost.ingressos}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="demanda" class="col-sm-2 control-label">Quantitat de diners demanada : </label>
+          <div class="col-sm-9">
+            <p class="form-control">{{pressupost.demanda}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-8">
+            <!--<button type="submit" class="btn btn-info" (click)="goBack()">Cancel</button>-->
+             <a  class="btn btn-info" (click)="goBack()">Enrere</a>
+          </div>
+        </div>
+    </form>
+  </div>
+</div>

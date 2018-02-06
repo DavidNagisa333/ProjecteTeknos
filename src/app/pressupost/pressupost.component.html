@@ -13,9 +13,9 @@
         <td>{{pressupost.nomPersona}}</td>
         <td>{{pressupost.cognomPersona}}</td>
         <td>{{pressupost.situacioLaboral}}</td>
-        <td width=275> 
-            <a class="btn btn-info" routerLink="/show/{{pressupost.id}}">Detall</a> 
-            <a class="btn btn-success" routerLink="/edit/{{pressupost.id}}">Editar</a>
+        <td width=275>
+            <a class="btn btn-info" routerLink="/detallPressupost/{{pressupost.id}}">Detall</a> 
+            <a class="btn btn-success" routerLink="/editarPressupost/{{pressupost.id}}">Editar</a>
             <a class="btn btn-danger" (click)="deletePressupost(pressupost.id)">Eliminar</a>
         </td>
      </tr>

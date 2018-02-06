@@ -1,0 +1,46 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Crea un pressupost</div>
+  <div class="panel-body">
+    <form class="form-horizontal" (submit)="addPressupost()">
+  <div class="form-group">
+    <label for="nomPersona" class="col-sm-2 control-label">Nom del solicitant : </label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control"  [(ngModel)]="model.nomPersona" name="nom">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="cognomPersona" class="col-sm-2 control-label">Cognoms del solicitant : </label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" [(ngModel)]="model.cognomPersona" name="cognom">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="situacioLaboral" class="col-sm-2 control-label">Situació laboral : </label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control"  [(ngModel)]="model.situacioLaboral" name="situacioLaboral">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="ingressos" class="col-sm-2 control-label">Ingressos mensuals : </label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control"  [(ngModel)]="model.ingressos" name="ingressos">
+    </div>
+  </div>
+   <div class="form-group">
+    <label for="demanda" class="col-sm-2 control-label">Quantitat de diners demanada : </label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control"  [(ngModel)]="model.demanda" name="demanda">
+    </div>
+  </div>  
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <button type="submit" class="btn btn-success">Crear</button>
+      <a  class="btn btn-danger" (click)="goBack()">Cancel.lar</a>
+    </div>
+   
+  </div>
+</form>
+
+  </div>
+</div>

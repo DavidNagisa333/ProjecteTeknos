@@ -9,6 +9,9 @@ import { PressupostComponent } from './pressupost/pressupost.component';
 import { TiquetComponent } from './tiquet/tiquet.component';
 import { LoginComponent } from './login/login.component';
 import { PressupostService} from './pressupost/pressupost.service';
+import { PressupostDetallComponent } from './pressupost/pressupost-detall/pressupost-detall.component';
+import { PressupostEditarComponent } from './pressupost/pressupost-editar/pressupost-editar.component';
+import { PressupostCrearComponent } from './pressupost/pressupost-crear/pressupost-crear.component';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { PressupostService} from './pressupost/pressupost.service';
     AppComponent,
     PressupostComponent,
     TiquetComponent,
-    LoginComponent
+    LoginComponent,
+    PressupostDetallComponent,
+    PressupostEditarComponent,
+    PressupostCrearComponent
   ],
   imports: [
     BrowserModule,

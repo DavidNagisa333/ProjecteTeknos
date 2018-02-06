@@ -12,17 +12,16 @@ export class PressupostComponent implements OnInit {
     private _pressupostService:PressupostService,
     private router: Router
    ) { }
+
   pressupostos:any;
   ngOnInit() {
     this.getPressupostos();
   }
 
   getPressupostos(){
-    console.log('component');
      this._pressupostService
         .getPressupostos()
         .subscribe(pressupostos => {
-        console.log(pressupostos)
         this.pressupostos = pressupostos;
           
       })
@@ -35,4 +34,6 @@ export class PressupostComponent implements OnInit {
         this.getPressupostos();
       } )
   }
+
+
 }
