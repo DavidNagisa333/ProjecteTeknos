@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  background-image: url("app/vendor/fons-home.jpg");
+}
+
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+   color: black;
+}
+
+.transparent {
+   background-color: grey;
+   border-color: black;
+   opacity: 0.8;
+   color: black;
+}
+
+.navbar .active .seleccionat{
+	background-color: transparent;
+	background: transparent;
+   border-bottom: 1px solid white;
+}
+
+.navbar .active {
+  
+}
+
+.transparent-form{
+   background-color: grey;
+   background: grey;
+   border-color: black;
+   color: black;
+   opacity: 0.9;
+}
+
+.navbar .transparent::placeholder{
+   color: black;
+}
