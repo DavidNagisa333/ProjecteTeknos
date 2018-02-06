@@ -9,8 +9,8 @@ const routes: Routes = [
   
     {path: 'pressupost', component: PressupostComponent},
     {path: 'tiquet', component: TiquetComponent},
-    {path: 'login', component: LoginComponent},
-    {path: 'test', component: CrearTiquetComponent},
+    {path: '', component: LoginComponent},
+    {path: 'crearTiquet', component: CrearTiquetComponent},
     {path: 'buscarTiquet/:nom', component: BuscarTiquetComponent}
 ];
 

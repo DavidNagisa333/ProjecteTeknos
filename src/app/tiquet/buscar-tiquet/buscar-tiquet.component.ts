@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TiquetService } from '../tiquet.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-buscar-tiquet',
@@ -9,15 +10,17 @@ import { TiquetService } from '../tiquet.service';
 })
 export class BuscarTiquetComponent implements OnInit {
 
-  constructor(private buscarTiquetService:TiquetService) { }
-  name;tiquets;
+  constructor(private buscarTiquetService:TiquetService,
+  	private route: ActivatedRoute) { }
+  nom;tiquets;
   ngOnInit() {
-  	
+  	this.nom = this.route.snapshot.params.nom;
   	this.tiquets = this.buscarTiquet();
   }
 
   buscarTiquet(){
-  	this.buscarTiquetService.buscarTiquets(this.name)
+  	console.log(this.nom);
+  	this.buscarTiquetService.buscarTiquets(this.nom)
                 .subscribe(
                 data => (this.tiquets = data
                   )

@@ -10,15 +10,16 @@ import { ActivatedRoute, Router } from '@angular/router';
   providers: [ TiquetService]
 })
 export class CrearTiquetComponent implements OnInit {
-	addNom;values;error;finished
-  constructor(private crearService:TiquetService,
+	nom;values;error;finished
+  constructor(
+    private crearService:TiquetService,
     private route: ActivatedRoute,
     private router: Router) {}
    
     ngOnInit() {
     }
     newTiquetSend(){
-    	this.crearService.addTiquet(this.addNom)
+    	this.crearService.addTiquet(this.nom)
                  .subscribe(
             value => this.values=value,
             error => {},
@@ -27,6 +28,7 @@ export class CrearTiquetComponent implements OnInit {
           
        } 
     buscarTiquet(){
-       this.router.navigate(['/buscarTiquet'], { queryParams: { nom: this.addNom } });
+      var urlTiquet = "/buscarTiquet/"+this.nom;
+       this.router.navigate([urlTiquet]);
     }
   }
