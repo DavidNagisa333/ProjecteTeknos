@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map'
 
 @Injectable()
 export class TiquetService {
-   private url = 'http://localhost:8080/demo/';
+   private url = 'http://172.31.48.1:8080/demo/';
 
 
 	constructor(private http: Http){}
