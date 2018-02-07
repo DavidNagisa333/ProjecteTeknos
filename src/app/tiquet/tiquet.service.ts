@@ -32,6 +32,7 @@ export class TiquetService {
     	var listUrl = this.url + "all";
     	var a = this.http.get(listUrl)
                 .map(res => res.json())
+                
       return a;
     }
 
@@ -43,3 +44,5 @@ export class TiquetService {
       return a;
     }
 }
+
+

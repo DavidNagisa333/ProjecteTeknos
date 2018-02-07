@@ -1,15 +1,25 @@
-<button (click)="listTiquets()" class="btn btn-default">Mostrar Tiquets
-</button>
 
+<h2 style="color:lightGrey;display: inline-block;">Pressupostos</h2>
+<table class="table">
+  <thead>
+    <tr class="transparent">
+      <th class="cela"><strong>Id</strong></th>
+      <th class="cela"><strong>Nom</strong></th>
+      <th class="cela"><a class="btn btn-info btn-xs" [routerLink]="['crearTiquet()']">   Nou Tiquet
+</a></th>
+    </tr>
+  </thead>
+  <tbody>
+     <tr *ngFor="let tiquet of tiquets">
+        <td class="cela">{{tiquet.id}}</td>
+        <td class="cela">{{tiquet.nom}}</td>
+        <td class="cela" width=275>
+            <a class="btn btn-warning btn-xs glyphicon glyphicon-edit" routerLink="/editarPressupost/{{tiquet.id}}"></a>
+            <a class="btn btn-danger btn-xs glyphicon glyphicon-trash" (click)="deleteTiquet(tiquet.id)"></a>
+        </td>
+     </tr>
+  </tbody>
+</table>
 
-  <div *ngFor='let tiquet of tiquets'>
-    <!--cursos fa ref. a components data-->
-    ----------------------------
-    <p>Tiquet: {{tiquet.id}}</p>
-    ----------------------------
-    <p>
-      Nom: {{tiquet.nom}}
-    </p>
-  </div> 
-    
+  
   
