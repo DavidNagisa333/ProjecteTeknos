@@ -13,10 +13,24 @@ body{
    border-color: transparent;
    color: black;
 }
+thead .cela{
+   color:white !important;
+   border: 0px !important;
+   text-align: center;
+}
+
+tbody .cela{
+   color:black !important;  
+   background-color: LightGrey;
+   text-align: center;
+   opacity: 0.9;
+}
 
 .transparent {
-   background-color: grey;
-   border-color: black;
+
+   border: 0px !important;
+   background-color: grey;   
+   border: 4px black;
    opacity: 0.9;
    color: black;
 }
@@ -37,8 +51,4 @@ body{
    border-color: black;
    color: black;
    opacity: 0.9;
-}
-
-.navbar .transparent::placeholder{
-   color: black;
 }

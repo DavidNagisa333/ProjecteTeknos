@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map'
 
 @Injectable()
 export class TiquetService {
-   private url = 'http://localhost:8080/demo/';
+   private url = 'http://172.31.48.1:8080/demo/';
 
 
 	constructor(private http: Http){}
@@ -32,7 +32,17 @@ export class TiquetService {
     	var listUrl = this.url + "all";
     	var a = this.http.get(listUrl)
                 .map(res => res.json())
+                
       return a;
     }
 
+    ///////
+  	buscarTiquets(nom){
+    	var getUrl = this.url + "searchByName?nom=" + nom;
+    	var a = this.http.get(getUrl)
+                .map(res => res.json())
+      return a;
+    }
 }
+
+

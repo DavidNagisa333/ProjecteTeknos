@@ -12,6 +12,14 @@ import { PressupostService} from './pressupost/pressupost.service';
 import { PressupostDetallComponent } from './pressupost/pressupost-detall/pressupost-detall.component';
 import { PressupostEditarComponent } from './pressupost/pressupost-editar/pressupost-editar.component';
 import { PressupostCrearComponent } from './pressupost/pressupost-crear/pressupost-crear.component';
+//import { ModificarTiquetComponent } from './tiquet/modificar-tiquet/modificar-tiquet.component';
+//import { EsborrarTiquetComponent } from './tiquet/esborrar-tiquet/esborrar-tiquet.component';
+//import { ConsultarTiquetComponent } from './tiquet/consultar-tiquet/consultar-tiquet.component';
+import { CrearTiquetComponent } from './tiquet/crear-tiquet/crear-tiquet.component';
+//import { ModificarPressupostComponent } from './pressupost/modificar-pressupost/modificar-pressupost.component';
+//import { EsborrarPressupostComponent } from './pressupost/esborrar-pressupost/esborrar-pressupost.component';
+//import { ConsultarPressupostComponent } from './pressupost/consultar-pressupost/consultar-pressupost.component';
+import { BuscarTiquetComponent } from './tiquet/buscar-tiquet/buscar-tiquet.component';
 
 
 @NgModule({
@@ -22,7 +30,15 @@ import { PressupostCrearComponent } from './pressupost/pressupost-crear/pressupo
     LoginComponent,
     PressupostDetallComponent,
     PressupostEditarComponent,
-    PressupostCrearComponent
+    PressupostCrearComponent,
+    //ModificarTiquetComponent,
+    //ConsultarTiquetComponent,
+    CrearTiquetComponent,
+    //CrearPressupostComponent,
+    //ModificarPressupostComponent,
+    //EsborrarPressupostComponent,
+    //ConsultarPressupostComponent,
+    BuscarTiquetComponent
   ],
   imports: [
     BrowserModule,
