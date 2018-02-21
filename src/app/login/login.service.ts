@@ -47,4 +47,17 @@ export class LoginService {
         // clear token remove user from local storage to log user out
         localStorage.removeItem('currentUser');
     }
+
+
+    //SERGI NO EM BORRIS AIXÓ QUE ES PER FER PROVES/////////////////
+    persona = [
+      {id: 1, text: 'Sentence 1'},
+      {id: 2, text: 'Sentence 2'}   
+    ]
+
+    getPersona(id){
+      console.log(this.persona[id-1])
+      return this.persona[id-1];
+    }
+    //////////////////////////////////////////////////////////////
 }
