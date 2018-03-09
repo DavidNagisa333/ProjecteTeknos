@@ -29,5 +29,9 @@ export class PressupostService {
     return this._http.post("http://172.17.10.64/api/insert.php",info)
       .map(()=>"");
   }
+  getPressupostosPersona(id){
+      return this._http.get("http://172.17.10.64/api/selectonepersona.php")
+      .map(()=>this.getPressupostosPersona(id));
+  };
 
 }

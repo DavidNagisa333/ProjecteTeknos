@@ -19,11 +19,11 @@ export class PressupostEditarComponent implements OnInit {
       this.getSinglePressupost();
   }
 
-  //model:any={};
   model = new Pressupost();
   id = this.route.snapshot.params['id'];
-  getSinglePressupost(){
-    
+
+
+  getSinglePressupost(){    
     this.pressupostService
       .getPressupost(this.id)
       .subscribe(pressupost =>{

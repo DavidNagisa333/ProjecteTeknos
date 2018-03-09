@@ -51,12 +51,12 @@ export class LoginService {
 
     //SERGI NO EM BORRIS AIXÓ QUE ES PER FER PROVES/////////////////
     persona = [
-      {id: 1, text: 'Sentence 1'},
-      {id: 2, text: 'Sentence 2'}   
+       {nomPersona: 'david', cognomPersona: 'caceres', situacioLaboral:'becari', id_persona:'1'},  
+       {nomPersona: 'david2', cognomPersona: 'caceres2', situacioLaboral:'becari2', id_persona:'2'}
     ]
 
     getPersona(id){
-      console.log(this.persona[id-1])
+      //console.log(this.persona[id-1])
       return this.persona[id-1];
     }
     //////////////////////////////////////////////////////////////
