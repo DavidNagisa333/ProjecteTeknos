@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response} from '@angular/http';
+import { Http, Headers, Response , RequestOptions} from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -60,4 +60,14 @@ export class LoginService {
       return this.persona[id-1];
     }
     //////////////////////////////////////////////////////////////
+
+    url = "http://localhost:8080/user/getUser?id=";
+    getPersona2(id){  
+    let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + this.getToken() });
+    let options = new RequestOptions({ headers: headers });
+      
+    return this.http.get(this.url+id,options)
+      .map(res => {return res.json();});
+  }
+
 }

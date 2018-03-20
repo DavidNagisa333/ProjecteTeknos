@@ -8,6 +8,7 @@ import { PressupostEditarComponent } from './pressupost/pressupost-editar/pressu
 import { PressupostCrearComponent } from './pressupost/pressupost-crear/pressupost-crear.component';
 import { CrearTiquetComponent } from './tiquet/crear-tiquet/crear-tiquet.component'; 
 import { BuscarTiquetComponent } from './tiquet/buscar-tiquet/buscar-tiquet.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [  
     {path: 'pressupost', component: PressupostComponent},
@@ -15,9 +16,10 @@ const routes: Routes = [
     {path: 'editarPressupost/:id', component:PressupostEditarComponent},
     {path:'addPressupost', component:PressupostCrearComponent},
     {path: 'tiquet', component: TiquetComponent},
-    {path: '', component: LoginComponent},
+    {path: 'login', component: LoginComponent},
     {path: 'crearTiquet', component: CrearTiquetComponent},
-    {path: 'buscarTiquet/:nom', component: BuscarTiquetComponent}
+    {path: 'buscarTiquet/:nom', component: BuscarTiquetComponent},
+    {path: '', component: HomeComponent}
 ];
 
 @NgModule({

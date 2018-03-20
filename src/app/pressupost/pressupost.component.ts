@@ -39,7 +39,9 @@ pressupostos= [];
 
   ngOnInit() {
     //this.getPressupostos();
-    this.persona=this.loginService.getPersona(this.id);
+    this.persona=this.loginService.getPersona2(this.id)
+    .subscribe(result => this.persona =result.json());
+
     this.getPressupostosPersona(this.persona.id_persona);
   }
 //transformar en array

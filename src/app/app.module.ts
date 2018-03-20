@@ -20,6 +20,7 @@ import { CrearTiquetComponent } from './tiquet/crear-tiquet/crear-tiquet.compone
 //import { EsborrarPressupostComponent } from './pressupost/esborrar-pressupost/esborrar-pressupost.component';
 //import { ConsultarPressupostComponent } from './pressupost/consultar-pressupost/consultar-pressupost.component';
 import { BuscarTiquetComponent } from './tiquet/buscar-tiquet/buscar-tiquet.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { BuscarTiquetComponent } from './tiquet/buscar-tiquet/buscar-tiquet.comp
     //ModificarPressupostComponent,
     //EsborrarPressupostComponent,
     //ConsultarPressupostComponent,
-    BuscarTiquetComponent
+    BuscarTiquetComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
