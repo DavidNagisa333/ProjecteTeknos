@@ -29,7 +29,6 @@ export class LoginComponent{
         this.loading = true;
         this.loginService.login(this.model.username, this.model.password)
             .subscribe(result => {
-            console.log(result);
                 if (result === true) {
                     window.location.reload();                   
                 } else {

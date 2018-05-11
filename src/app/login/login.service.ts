@@ -49,25 +49,11 @@ export class LoginService {
     }
 
 
-    //SERGI NO EM BORRIS AIXÓ QUE ES PER FER PROVES/////////////////
-    persona = [
-       {nomPersona: 'david', cognomPersona: 'caceres', situacioLaboral:'becari', id_persona:'1'},  
-       {nomPersona: 'david2', cognomPersona: 'caceres2', situacioLaboral:'becari2', id_persona:'2'}
-    ]
-
-    getPersona(id){
-      //console.log(this.persona[id-1])
-      return this.persona[id-1];
+    getPersona(){    
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    headers.append('Authorization',this.getToken().toString());
+    let options = new RequestOptions({ headers: headers });   
+    return this.http.get("http://localhost:8080/user/getUser",options)
+      .map((res: Response) => res.json());
     }
-    //////////////////////////////////////////////////////////////
-
-    url = "http://localhost:8080/user/getUser?id=";
-    getPersona2(id){  
-    let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + this.getToken() });
-    let options = new RequestOptions({ headers: headers });
-      
-    return this.http.get(this.url+id,options)
-      .map(res => {return res.json();});
-  }
-
 }

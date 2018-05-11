@@ -14,27 +14,27 @@ export class PressupostService {
    
 
   getPressupostos(){
-    return this._http.get("http://172.17.10.64/api/select.php")
+    return this._http.get("http://localhost/api/select.php")
       .map(res => res.json());
   };
   deletePressupost(id){
-    return this._http.post("http://172.17.10.64/api/delete.php/",{'id':id})
+    return this._http.post("http://localhost/api/delete.php/",{'id':id})
       .map(()=>this.getPressupostos());
   }
  getPressupost(id){
-    return this._http.post("http://172.17.10.64/api/selectone.php/",{'id':id})
+    return this._http.post("http://localhost/api/selectone.php/",{'id':id})
       .map(res=>res.json());
   }
   updatePressupost(info){
-    return this._http.post("http://172.17.10.64/api/update.php/", info)
+    return this._http.post("http://localhost/api/update.php/", info)
       .map(()=>"");
   }
    addPressupost(info){
-    return this._http.post("http://172.17.10.64/api/insert.php",info)
+    return this._http.post("http://localhost/api/insert.php",info)
       .map(()=>"");
   }
   getPressupostosPersona(id){
-      return this._http.post("http://172.17.10.64/api/selectonepersona.php",{'id':id})
+      return this._http.post("http://localhost/api/selectonepersona.php",{'id':id})
       .map(res=>res.json());
   };
 

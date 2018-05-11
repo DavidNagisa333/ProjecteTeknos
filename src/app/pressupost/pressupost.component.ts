@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { PressupostService } from './pressupost.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import { LoginService } from '../login/login.service';
+import { Observable }     from 'rxjs/Observable';
+import { Http, Response, RequestOptions, Headers } from '@angular/http';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 @Component({
   selector: 'app-pressupost',
@@ -14,35 +18,13 @@ export class PressupostComponent implements OnInit {
     private router: Router,
     private loginService: LoginService
    ) { }
-/*
-  pressupostos = [
-  {
-    "nomPersona" : "1",
-    "cognomPersona" : "1",
-    "situacioLaboral" : "1",
-    "ingressos" : "1",
-    "demanda" : "1"
-  },
-  {
-    "nomPersona" : "1",
-    "cognomPersona" : "1",
-    "situacioLaboral" : "1",
-    "ingressos" : "1",
-    "demanda" : "1"
-  }
 
-  ];
-*/
 pressupostos= [];
-  id=1;
   persona;
 
   ngOnInit() {
     //this.getPressupostos();
-    this.persona=this.loginService.getPersona2(this.id)
-    .subscribe(result => this.persona =result.json());
-
-    this.getPressupostosPersona(this.persona.id_persona);
+    this.loginService.getPersona().subscribe(result => {this.getPressupostosPersona(result);});
   }
 //transformar en array
   getPressupostosPersona(id){
@@ -50,8 +32,8 @@ pressupostos= [];
         .getPressupostosPersona(id)
         .subscribe(pressupostos => {
         this.pressupostos = pressupostos;
-        console.log(this.pressupostos);
           })
+ 
   }
 
 
@@ -70,7 +52,4 @@ pressupostos= [];
         this.getPressupostos();
       } )
   }
-
-
-
 }

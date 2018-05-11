@@ -18,12 +18,11 @@ export class PressupostDetallComponent implements OnInit {
     private loginService: LoginService
   ) { }
 
-  id=1;
-  persona;
+  id;
 
   ngOnInit() {
     this.getSinglePressupost();
-    this.persona=this.loginService.getPersona(this.id);
+    this.id=this.loginService.getPersona();
   }
 
   pressupost:Pressupost;

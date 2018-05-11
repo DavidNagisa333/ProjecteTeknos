@@ -14,11 +14,11 @@ export class PressupostCrearComponent implements OnInit {
     private pressupostService: PressupostService,
     private router: Router, private loginService: LoginService) { }
 
-  id=1;
+  id;
   persona;
 
   ngOnInit() {
-    this.persona=this.loginService.getPersona(this.id);
+    this.id=this.loginService.getPersona();
   }
 
 model:Pressupost = new Pressupost();
